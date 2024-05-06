@@ -1,5 +1,5 @@
 
-1) Remember to have the env.developement file in the all AllCodeInside -> It can be downloaded from here (perm required): 
+1) Remember to have the env.developement file in the all AllCodeInside -> It can be downloaded from here (perm required): https://drive.google.com/file/d/1wlJnTZhnQmqvGLxLa-mVho56qHSTx3OP/view
 
 2) Change directory to "AllCodeInside" then enter 'npm start' in the command line.
 
