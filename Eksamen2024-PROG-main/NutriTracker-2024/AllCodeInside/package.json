@@ -1,0 +1,29 @@
+{
+  "name": "eksamenskode",
+  "version": "1.0.0",
+  "description": "indeholder alt",
+  "main": "config.js",
+  "type": "module",
+  "dependencies": {
+    "bcrypt": "5.1.1",
+    "chai": "4.4.1",
+    "chai-http": "4.4.0",
+    "cors": "2.8.5",
+    "dotenv": "16.4.5",
+    "express": "4.19.2",
+    "express-session": "1.18.0",
+    "joi": "17.13.0",
+    "mocha": "9.1.0",
+    "morgan": "1.10.0",
+    "mssql": "10.0.2"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai-http": "4.2.0"
+  }
+}

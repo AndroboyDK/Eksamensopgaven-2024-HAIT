@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTracker</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./modalStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;800&display=swap">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./foodItemInspector.css">
+    <script src="foodItemInspector.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="container_header">
+            <div id="logo_div">
+                <img src="./Logo.png" alt="Nutri Tracker Logo" id="logo_image">
+                <p id="loggedInUser"></p>
+            </div>
+            <ul id="navbar">
+                <li><a href="../dailyNutri/DailyNutri.html">Daily Nutri</a></li>
+                <li><a href="../mealCreator/mealCreator.html">Meal Creator</a></li>
+                <li><a href="../mealTracker/mealTracker.html">Meal Tracker</a></li>
+                <li><a href="../activityTracker/activity.html">Activity Tracker</a></li>
+                <li><a href="../usersFront/editOrDelete.html">Settings</a></li>
+                <li>
+                    <form action="../users/logout" method="post"><a><input type="submit" style="all: unset"
+                                value="Logout"></a></form>
+                </li>
+            </ul>
+        </div>
+        <img src="./Navbar_underside.png">
+    </header>
+    <section id="displayBlock">
+        <div>
+            <a id="GOBACK" href="mealCreator.html">Back to Meal creator</a>
+            <form id="inputFromUser">
+                <label for="inputFromUser">Search for a food item: </label>
+                <input type="text" id="inputFromUser" placeholder="Squash" autocomplete="off" required>
+            </form>
+            <div id="borderMeRounded">
+                <ul id="loadInfoInhere">
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

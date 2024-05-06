@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTracker</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;800&display=swap">
+</head>
+
+<body>
+    <header>
+        <div id="container_header">
+            <div id="logo_div">
+                <img src="./Logo.png" alt="Nutri Tracker Logo" id="logo_image">
+                <p id="loggedInUser"></p>
+            </div>
+            <ul id="navbar">
+                <li><a href="../dailyNutri/DailyNutri.html">Daily Nutri</a></li>
+                <li><a href="../mealCreator/mealCreator.html">Meal Creator</a></li>
+                <li><a href="../mealTracker/mealTracker.html">Meal Tracker</a></li>
+                <li><a href="../activityTracker/activity.html">Activity Tracker</a></li>
+                <li><a href="../usersFront/editOrDelete.html">Settings</a></li>
+                <li>
+                    <form action="../users/logout" method="post"><a><input type="submit" style="all: unset"
+                                value="Logout"></a></form>
+                </li>
+            </ul>
+        </div>
+        <img src="./Navbar_underside.png">
+    </header>
+    <section>
+        <div id="wrapper">
+            <div id="upper_container">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div style="display: flex;justify-content: center; align-items: center;">
+                    <div id="turnOffAndOnButton">
+                        <div id="turnToDay">Hours View</div>
+                        <div id="turnToMonth">Days View</div>
+                    </div>
+                </div>
+            </div>
+            <div id="lower_container">
+                <h2 id="defualt_value">↗️ Click on a button to load ⬆️</h2>
+                <table id="table">
+                    <!-- content are dynamicaly insertet -->
+                </table>
+            </div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>

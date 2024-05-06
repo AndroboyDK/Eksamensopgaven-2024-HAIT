@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTracker</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./modalStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;800&display=swap">
+    <script src="createMealModal.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="container_header">
+            <div id="logo_div">
+                <img src="./Logo.png" alt="Nutri Tracker Logo" id="logo_image">
+                <p id="loggedInUser"></p>
+            </div>
+            <ul id="navbar">
+                <li><a href="../dailyNutri/DailyNutri.html">Daily Nutri</a></li>
+                <li><a href="../mealCreator/mealCreator.html">Meal Creator</a></li>
+                <li><a href="../mealTracker/mealTracker.html">Meal Tracker</a></li>
+                <li><a href="../activityTracker/activity.html">Activity Tracker</a></li>
+                <li><a href="../usersFront/editOrDelete.html">Settings</a></li>
+                <li><form action="../users/logout" method="post"><a><input type="submit" style="all: unset" value="Logout"></a></form></li>
+            </ul>
+        </div>
+        <img src="./Navbar_underside.png">
+    </header>
+    <div id="holdseverythingafternav">
+        <div id="OtherMidBox">
+            <form id="mealName">
+                <label for="mealname">Name your meal:</label>
+                <input type="text" id="mealname" placeholder="Squash cake" autocomplete="off" required>
+            </form>
+            <button id="postMeal">Add ingredients</button>
+        </div>
+        <div id="midBox">
+            <div id="holdsmealnameformsAndList of">
+                <div>
+                    <form>
+                        <label for="weightOfItem">Amount (grams):</label>
+                        <input type="text" id="weightOfItem" placeholder="100" autocomplete="off" required step="1">
+                    </form>
+                    <form>
+                        <label for="itemsInput">Search for ingredients</label>
+                        <input type="text" id="itemsInput" list="itemsList" autocomplete="off" placeholder="Squash" required>
+                        <select id="top5Ingrids">
+                            <option value="NONE">Search for ingredients to get choices</option>
+                        </select>
+                    </form>
+                    <button id="addIngridBtn">Add to your meal</button>
+                </div>
+            </div>
+            <div id="holdslistofingredients">
+                <p>Your ingredients & the weight for them:</p>
+                <ul id="holdfooditemspushedin">
+                </ul>
+            </div>
+            <button id="createMeal">CREATE AS A MEAL</button>
+            <a href="../mealCreator/MealCreator.html">
+                <button id="goBackToCreator">Go Back to Meal Creator</button>
+            </a>
+        </div>
+    </div>
+    <img id="loadinggif" src="./loadinggif.gif" alt="Loading GIF" style="display: none; z-index: 9999; height: auto; width: 800px; align-self: center; justify-self: center; ">
+</body>
+
+</html>

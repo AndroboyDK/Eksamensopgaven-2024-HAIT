@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>NutriTracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;800&display=swap">
+    <script src="./scriptForTracker.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="container_header">
+            <div id="logo_div">
+                <img src="./Logo.png" alt="Nutri Tracker Logo" id="logo_image">
+                <p id="loggedInUser"></p>
+            </div>
+            <ul id="navbar">
+                <li><a href="../dailyNutri/DailyNutri.html">Daily Nutri</a></li>
+                <li><a href="../mealCreator/mealCreator.html">Meal Creator</a></li>
+                <li><a href="../mealTracker/mealTracker.html">Meal Tracker</a></li>
+                <li><a href="../activityTracker/activity.html">Activity Tracker</a></li>
+                <li><a href="../usersFront/editOrDelete.html">Settings</a></li>
+                <li><form action="../users/logout" method="post"><a><input type="submit" style="all: unset" value="Logout"></a></form></li>
+            </ul>
+        </div>
+        <img src="./Navbar_underside.png">
+    </header>
+
+    <section>
+        <div id="external">
+            <div id="holder">
+                <h1>Intake tracker</h1>
+                <div id="holdsh1andbuttons">
+                    <p>Here you can see your registered intakes of meals, water and food items.</p>
+                    <div id="buttonsHolder">
+                        <a href="../mealTracker/trackerModalWater.html">
+                            <button id="waterAdder">💧</button>
+                        </a>
+                        <a href="../mealTracker/trackerModalMeals.html">
+                            <button id="mealAdder">🍽️</button>
+                        </a>
+                        <a href="../mealTracker/trackerModalIngredient.html">
+                            <button id="ingredientAdder">🍋</button>
+                        </a>
+                    </div>
+                </div>
+                <p id="textOverViewBtns">↘️ Switch between the view of your intakes ↙️</p>
+                <div id="viewbtns">
+                    <button id="showWater">Water</button>
+                    <button id="showMeals">Meals</button>
+                    <button id="showIngrids">Food items</button>
+                </div>
+                <div id="tableHolder">
+                    <table>
+                        <thead>
+                            <tr id="dontshowborder">
+                                <th>Date & Time of intake</th>
+                                <th>Water</th>
+                                <th>Location</th>
+                        <tbody id="waterMealTrackerTableBody">
+                            <!-- Tabelrækker vil blive tilføjet dynamisk her -->
+                        </tbody>
+                        </tr>
+                        </thead>
+
+                    </table>
+                </div>
+                <div id="HOLDSTABLEFORINGRIDS">
+                    <table>
+                        <thead>
+                            <tr id="dontshowborder">
+                                <th>Meal name || Ingridient name</th>
+                                <th>Date & Time of intake</th>
+                                <th>Weight & energy</th>
+                                <th>Nutrition</th>
+                                <th>Location</th>
+                        <tbody id="ingridsMealTrackerTableBody">
+                            <!-- Tabelrækker vil blive tilføjet dynamisk her -->
+                        </tbody>
+                        </tr>
+                        </thead>
+
+                    </table>
+                </div>
+                <div id="HOLDSTABLEFORMEALS">
+                    <table>
+                        <thead>
+                            <tr id="dontshowborder">
+                                <th>Meal name || Ingridient name</th>
+                                <th>Date & Time of intake</th>
+                                <th>Weight & energy</th>
+                                <th>Nutrition</th>
+                                <th>Location</th>
+                        <tbody id="mealsMealTrackerTableBody">
+                            <!-- Tabelrækker vil blive tilføjet dynamisk her -->
+                        </tbody>
+                        </tr>
+                        </thead>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="editForm" class="modal">
+        <h2>Edit Water Intake</h2>
+        <p id="waterRegId"></p>
+        <form id="editForms">
+            <label for="editWaterAmount">Water Amount (ml):</label>
+            <input type="number" id="editWaterAmount" required step="1">
+            <br>
+            <label for="editDateTime">Date and Time:</label>
+            <input type="datetime-local" id="editDateTime" required><br>
+        </form>
+        <button id="saveinfo">Save</button>
+        <button onclick="closeEditForm()">Close</button>
+    </div>
+    <div id="editFormForMealAndIngrid" class="modal">
+        <h2>Edit Meal/Ingredient Intake</h2>
+        <p id="intakeId"></p>
+        <form id="editFormsForMealAndIngrid">
+            <label for="editWeight">Weight (grams):</label>
+            <input type="number" id="editWeight" required step="1">
+            <br>
+            <label for="editDateTimeForMealAndIngrid">Date and Time:</label>
+            <input type="datetime-local" id="editDateTimeForMealAndIngrid" required><br>
+        </form>
+        <button id="saveinfoForMealAndIngrid">Save</button>
+        <button onclick="closeEditFormForMealAndIngrid()">Close</button>
+    </div>
+</body>
+
+</html>

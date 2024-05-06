@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTracker</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;800&display=swap">
+</head>
+<body>
+    <header>
+        <div id="container_header">
+            <div id="logo_div"><img src="./Logo.png" alt="Nutri Tracker Logo" id="logo_image"></div>
+            <ul id="navbar">
+                <li><a href="../../dailyNutri/frontend/DailyNutri.html">Daily Nutri</a></li>
+                <li><a href="../../mealCreator/frontend/mealCreator.html">Meal Creator</a></li>
+                <li><a href="../../mealTracker/frontend/mealTracker.html">Meal Tracker</a></li>
+                <li><a href="../../activityTracker/frontend/activity.html">Activity Tracker</a></li>
+                <li><a href="../../userFunctionality/frontend/editOrDelete.html">Settings</a></li>
+                <li><form action="../users/logout" method="post"><a><input type="submit" style="all: unset" value="Logout"></a></form></li>
+            </ul>
+        </div>
+        <img src="./Navbar_underside.png">
+    </header>
+    <section>
+
+            <form class="form-login" action="/users/login" method="post">
+                 <h2 class="form_login_heading">Login here</h2>
+          
+                <input type="text" class="form-input" name="email" placeholder="Email Address" required="" autofocus="" />
+                <input type="password" class="form-input" name="pwd" placeholder="Password" required="" />
+                <br>
+                <div id="button_wrapper">
+                    <button class="login_button" type="submit">Login</button>
+                </div>
+                <br>
+                <div id="button_wrapper">
+                    <a href="./signup.html" class="signup_link">Or sign up here</a>
+                </div>
+            </form>
+
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>

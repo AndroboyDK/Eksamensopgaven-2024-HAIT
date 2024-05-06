@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Tracker</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;800&display=swap">
+    <script src="trackerModalWater.js"></script>
+</head>
+
+<body>
+    <div id="holder1" class="container">
+        <h2>Water Tracker</h2>
+        <form id="waterForm">
+            <label for="waterAmount">How much water did you drink?</label>
+            <input type="number" id="waterAmount" name="waterAmount" placeholder="Enter amount (ml)" required>
+            <br>
+            <label for="dateTime">And when you consumed it:</label>
+            <input type="datetime-local" id="dateTime" name="dateTime" value="" required>
+            <br>
+        </form>
+        <button id="doThis" type="submit">Add</button>
+        <button type="button" onclick="goBack()">Back to Meal Tracker</button>
+    </div>
+    <img id="loadinggif" src="./loadinggif.gif" alt="Loading GIF" style="display: none; z-index: 9999; height: auto; width: 800px; align-self: center; justify-self: center; ">
+</body>
+
+</html>

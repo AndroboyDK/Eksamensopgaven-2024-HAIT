@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTracker</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;800&display=swap">
+</head>
+
+<body>
+    <header>
+        <div id="container_header">
+            <div id="logo_div">
+                <img src="./Logo.png" alt="Nutri Tracker Logo" id="logo_image">
+                <p id="loggedInUser"></p>
+            </div>
+            <ul id="navbar">
+                <li><a href="../dailyNutri/DailyNutri.html">Daily Nutri</a></li>
+                <li><a href="../mealCreator/mealCreator.html">Meal Creator</a></li>
+                <li><a href="../mealTracker/mealTracker.html">Meal Tracker</a></li>
+                <li><a href="../activityTracker/activity.html">Activity Tracker</a></li>
+                <li><a href="../userFunctionality/editOrDelete.html">Settings</a></li>
+                <li>
+                    <form action="../users/logout" method="post"><a><input type="submit" style="all: unset"
+                                value="Logout"></a></form>
+                </li>
+            </ul>
+        </div>
+        <img src="./Navbar_underside.png">
+    </header>
+    <section>
+
+
+        <form id="form-edit" action="/users/updateUser" method="POST">
+            <h2 class="form_signup_heading">Change user information</h2>
+            <input type="text" class="form-control" name="email" placeholder="Email Address" autofocus="" />
+            <input type="password" class="form-control" name="pwd" placeholder="Password" />
+            <br>
+            <input type="text" class="form-control" name="uName" placeholder="name" />
+            <input type="number" class="form-control" name="weight" placeholder="weight" />
+            <br>
+            <br>
+            <h4>Date of birth <input type="date" class="form-control" name="dateOfBirth" /></h4>
+            <br>
+            <input type="radio" id="male" name="gender" value="m">
+            <label for="male">male</label>
+            <input type="radio" id="female" name="gender" value="f">
+            <label for="female">female</label>
+            <br>
+            <button class="login_button" type="submit">Change settings</button>
+        </form>
+        <form id="form-delete" action="/users/deleteUser" method="POST">
+            <h2 id="form_signup_heading">Delete account</h2>
+            <button onclick="confirmDelete()" class="login_button" type="submit">Delete account</button>
+        </form>
+
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>

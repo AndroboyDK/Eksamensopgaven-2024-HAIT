@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTracker</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;800&display=swap">
+    <script src="./activityModal.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="container_header">
+            <div id="logo_div">
+                <img src="./Logo.png" alt="Nutri Tracker Logo" id="logo_image">
+                <p id="loggedInUser"></p>
+            </div>
+            <ul id="navbar">
+                <li><a href="../dailyNutri/DailyNutri.html">Daily Nutri</a></li>
+                <li><a href="../mealCreator/mealCreator.html">Meal Creator</a></li>
+                <li><a href="../mealTracker/mealTracker.html">Meal Tracker</a></li>
+                <li><a href="../activityTracker/activity.html">Activity Tracker</a></li>
+                <li><a href="../usersFront/editOrDelete.html">Settings</a></li>
+                <li>
+                    <form action="../users/logout" method="post"><a><input type="submit" style="all: unset"
+                                value="Logout"></a></form>
+                </li>
+            </ul>
+        </div>
+        <img src="./Navbar_underside.png">
+    </header>
+    <div id="holdseverythingafternav">
+        <div id="midBox">
+            <div id="holdsh2andbutton">
+                <h2>Track Your Activities</h2>
+                <a href="activity.html">
+                    <button id="showUserActivity">X</button>
+                </a>
+            </div>
+            <div id="holdsactivityparams">
+                <div>
+                    <form id="activity">
+                        <label for="activityName">Pick your activity:</label>
+                        <select id="activityName" required>
+                            <option value="">Select an activity</option>
+                        </select>
+                    </form>
+                </div>
+                <form>
+                    <label for="dateAndTime">Add date and time:</label>
+                    <input type="datetime-local" id="dateAndTime" name="dateAndTime" required value="">
+                </form>
+                <form>
+                    <label for="activityDuration">Add duration of acitivity (min):</label>
+                    <input type="number" id="activityDuration" required value="">
+                </form>
+                <button id="createActivity">Create activity</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

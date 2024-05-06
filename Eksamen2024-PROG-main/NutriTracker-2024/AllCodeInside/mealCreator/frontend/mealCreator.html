@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>NutriTracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;800&display=swap">
+    <script src="./mealCreator.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="container_header">
+            <div id="logo_div">
+                <img src="./Logo.png" alt="Nutri Tracker Logo" id="logo_image">
+                <p id="loggedInUser"></p>
+            </div>
+            <ul id="navbar">
+                <li><a href="../dailyNutri/DailyNutri.html">Daily Nutri</a></li>
+                <li><a href="../mealCreator/mealCreator.html">Meal Creator</a></li>
+                <li><a href="../mealTracker/mealTracker.html">Meal Tracker</a></li>
+                <li><a href="../activityTracker/activity.html">Activity Tracker</a></li>
+                <li><a href="../usersFront/editOrDelete.html">Settings</a></li>
+                <li>
+                    <form action="../users/logout" method="post"><a><input type="submit" style="all: unset"
+                                value="Logout"></a></form>
+                </li>
+            </ul>
+        </div>
+        <img src="./Navbar_underside.png">
+    </header>
+    <section>
+        <div id="external">
+            <div id="holder">
+                <div id="holdsh1andbutton">
+                    <h1>Meal creator</h1>
+                    <div>
+                        <a href="foodItemInspector.html">
+                            <button id="createMeal">🔍</button>
+                        </a>
+                        <a href="createMealModal.html">
+                            <button id="createMeal">+</button>
+                        </a>
+                    </div>
+                </div>
+                <div id="tableHolder">
+                    <table id="mealTable">
+                        <tr id="dontshowborder">
+                            <th>Meal #</th>
+                            <th>Meal Name</th>
+                            <th>Total Kcal pr. 100g</th>
+                            <th>Added on</th>
+                            <th># ingredients</th>
+                            <th>Times Eaten</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="viewIngridsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeViewIngridsModal">&times;</span>
+            <h2>Ingredients for Meal</h2>
+            <ul id="ingredientList"></ul>
+        </div>
+    </div>
+</body>
+
+</html>

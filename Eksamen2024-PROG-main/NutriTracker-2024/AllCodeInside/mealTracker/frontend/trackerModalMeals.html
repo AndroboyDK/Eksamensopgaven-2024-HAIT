@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;800&display=swap">
+    <script src="./trackerModalMeals.js"></script>
+    
+</head>
+
+<body>
+    <div id="external">
+        <a href="./mealTracker.html" class="close-button"><button>X</button></a>
+        <div id="holder1">
+            <label for="recipeSelect">1. Choose a created meal</label>
+            <select id="recipeSelect" required></select>
+            <br>
+            <label for="recipeWeight">2. Fill in weight of the meal that you ate (gram):</label>
+            <input type="number" id="recipeWeight" required step="1">
+            <br>
+            <label for="mealDate">3. When did you eat this meal?:</label>
+            <input type="datetime-local" id="dateTime" name="mealDate" value="" required>
+            <br>
+            <button id="createAnIntakeMeal">Create a meal as an intake</button>
+        </div>
+    </div>
+    <img id="loadinggif" src="./loadinggif.gif" alt="Loading GIF" style="display: none; z-index: 9999; height: auto; width: 800px; align-self: center; justify-self: center; ">
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+/* main settings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* color variables */
+:root {
+    --color-primary: #91c789;
+    --color-secondary-orange: #FFAB40;
+    --color-secondary-pink: #F29ABA;
+    --color-secondary-blueLight: #99D9DE;
+    --color-secondary-blue: #569BD5;
+    --color-secondary-greenLight: #DEF6D8;
+    --color-secondary-greenLightUltra: #F2FFF5;
+    --color-scale0: #000000;
+    --color-scale1: #252525;
+    --color-scale2: #424242;
+    --color-scale3: #616161;
+    --color-scale4: #757575;
+    --color-scale5: #9E9E9E;
+    --color-scale6: #BDBDBD;
+    --color-scale7: #E0E0E0;
+    --color-scale8: #F5F5F5;
+    --color-scale9: #FFFFFF;
+}
+
+/* shell design (the navbar and all other standart layouts) */
+header {
+    height: 170px;
+    background-color: var(--color-secondary-greenLight);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#container_header {
+    height: 130px;
+    width: 100%;
+    display: flex;
+}
+
+#logo_div {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+#logo_image {
+    width: 250px;
+    height: 50px;
+}
+
+#navbar {
+    width: 80%;
+    min-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+a {
+    color: var(--color-scale5);
+    text-decoration: none;
+    font-size: large;
+}
+
+a:hover,
+a:active,
+a:target {
+    color: var(--color-scale3);
+}
+
+header>img {
+    width: 100%;
+}
+
+section {
+    padding: 30px 50px 50px 50px;
+}
+
+#external {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#holder {
+    border-style: solid;
+    margin-top: 30px;
+    border-radius: 15px;
+    width: 80%;
+    height: auto;
+    padding: 25px;
+    border-color: #99d9de;
+}
+#holder1{
+    border-style: solid;
+    margin-top: 99px;
+    border-radius: 15px;
+    width: 50%;
+    height: auto;
+    padding: 25px;
+    border-color: #99d9de;
+
+}
+
+/* modal */
+.wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#holdsh1andbuttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 30px;
+    margin-bottom: 20px;
+
+}
+
+#buttonsHolder {
+    display: flex;
+
+}
+
+#mealAdder {
+    background-color: #91c789;
+    color: white;
+    border-radius: 200px;
+    border-color: white;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+#waterAdder {
+    background-color: #568Bd5;
+    color: white;
+    border-radius: 200px;
+    border-color: white;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+#ingredientAdder {
+    background-color: #F29ABA;
+    color: white;
+    border-radius: 200px;
+    border-color: white;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+table {
+    width: 95%;
+}
+
+tr {
+    background-color: #def6d8;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 8px;
+    color: var(--color-scale0);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+#dontshowborder {
+    border-style: none;
+    background-color: var(--color-scale9);
+}
+
+button {
+    border-radius: 45px;
+    background: var(--color-scale9);
+}
+
+button:hover {
+    color: var(--color-scale9);
+    color: var(--color-secondary-blue);
+}
+
+h1 {
+    padding-top: 10px;
+    padding-bottom: 20px
+}
+
+input[type="number"],
+input[type="datetime-local"],
+button {
+    /* margin-top: 10px; */
+}
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Container til redigeringsformen */
+.modal {
+    align-self: center;
+    justify-self: center;
+    width: 60%;
+    display: none;
+    height: auto;
+    box-shadow: 0 0 10px var(--color-scale0);
+    background-color: var(--color-scale9);
+    padding: 20px;
+    border-radius: 15px;
+}
+#editFormForMealAndIngrid{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Stil til redigeringsformen */
+#editForm {
+    background-color: var(--color-scale9);
+    padding: 30px;
+    border-radius: 5px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+#HOLDSTABLEFORINGRIDS {
+    display: none;
+}
+
+#HOLDSTABLEFORMEALS {
+    display: none;
+}
+
+#viewbtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+#textOverViewBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+#showIngrids {
+    margin: 2px;
+}
+
+#showMeals {
+    margin: 2px;
+}
+
+#showWater {
+    margin: 2px;
+    background-color: var(--color-primary);
+}
+
+
+
+/* For the trackModalWater:  */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 500px;
+}
