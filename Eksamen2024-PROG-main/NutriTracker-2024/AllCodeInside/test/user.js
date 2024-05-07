@@ -11,7 +11,7 @@ Her er den simpleste funktion til at udregne basalstofskiftet.
 Den er kun i dette dokument og den bliver brugt hver gang en bruger logger ind
 til at udregne deres basalstofskifte pr dags dato. 
 Brugeren skal selv sørger for at deres oplysninger ift. vægt og alder er opdateret. 
-*/ 
+*/
 function udregnBslss(weight, multiplyFactor, rightNumber) {
 
   return weight * multiplyFactor + parseFloat(rightNumber);
@@ -27,9 +27,9 @@ function calculateAge(birthDate) {
   let monthDif = today.getMonth() - birthDate.getMonth();
 
   if (monthDif < 0) {
-      age = age - 1;
+    age = age - 1;
   } else if (monthDif == 0 && today.getDate() < birthDate.getMonth()) {
-      age = age - 1;
+    age = age - 1;
   }
 
   return age;
@@ -47,10 +47,22 @@ describe('calculateAge', () => {
 
   it('should calculate the age to 10 if you are 10 years and 3 months', () => {
     const birthDate = new Date('2014-01-24');
+    const expectedAge = 10;
 
     const age = calculateAge(birthDate);
-    const expectedAge = 10;
+    
     chai.expect(age).to.equal(expectedAge);
+  });
+
+  //Bad path test
+  it('Should not calculate the age to 11 if you are 10 years and 9 months (if this fails then the test is a succes)', () => {
+    const birthDate = new Date('2014-01-04');
+    const notExpectedAge = 11;
+
+    const age = calculateAge(birthDate);
+    
+
+    chai.expect(age).to.equal(notExpectedAge);
   });
 
 });
@@ -65,6 +77,19 @@ describe('udregnBslss', () => {
     const bslss = udregnBslss(weight, multiplyFactor, rightNumber);
     chai.expect(bslss).to.equal(expectedBslss);
   });
+
+  //Bad path test: 
+  it('It should not give me the blss value 8 if you weigh 60 and you are a 20 (if this fails then the test is a succes)', () => {
+    const weight = 60;
+    const multiplyFactor = 0.064;
+    const rightNumber = "+2.84";
+    const notExpectedBslss = 8;
+
+    const bslss = udregnBslss(weight, multiplyFactor, rightNumber);
+    chai.expect(bslss).to.equal(notExpectedBslss);
+  
+  }); 
+
 });
 
 
@@ -102,32 +127,32 @@ describe("testing if user can be created, updated and deleted", () => {
 });
 }); */
 
-    /* mislykkede forsøg på at teste */
-    /* it("It should login a user, update og delete the user", (done) => {
-      // exercise
-      let agent = chai.request.agent(server);          
-      agent.post(`/users/login`)
-          .set('content-type', 'application/x-www-form-urlencoded')
-          .send({email, pwd})
+/* mislykkede forsøg på at teste */
+/* it("It should login a user, update og delete the user", (done) => {
+  // exercise
+  let agent = chai.request.agent(server);          
+  agent.post(`/users/login`)
+      .set('content-type', 'application/x-www-form-urlencoded')
+      .send({email, pwd})
+      .redirects(0)
+      .then( async (err, response1) => {
+        // verify  
+        response1.should.have.status(302);
+ 
+        return agent.post('/users/updateUser')
+        .send(updatedUser)
+        .redirects(0)
+        .then(async function(response2) { 
+          response2.should.have.status(302);
+ 
+          return agent.post('/users/deleteUser')
           .redirects(0)
-          .then( async (err, response1) => {
-            // verify  
-            response1.should.have.status(302);
-    
-            return agent.post('/users/updateUser')
-            .send(updatedUser)
-            .redirects(0)
-            .then(async function(response2) { 
-              response2.should.have.status(302);
-    
-              return agent.post('/users/deleteUser')
-              .redirects(0)
-              .then(async function(response3) {
-                response3.should.have.status(302);
-    
-                done();
-               });
-            })
-          });
-    }); */
-  
+          .then(async function(response3) {
+            response3.should.have.status(302);
+ 
+            done();
+           });
+        })
+      });
+}); */
+
