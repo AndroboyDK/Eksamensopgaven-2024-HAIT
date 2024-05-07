@@ -1,6 +1,6 @@
 // utils/api.schema.js
 import joi from 'joi';
-
+ 
 const schema = joi.object({
     intakeId: joi.number().required(),
     mealId: joi.number().allow(null),
