@@ -57,6 +57,12 @@ function addIngridInfoToTempArray(ingridId, ingridName) {
         ingridientId: ingridId,
         amount: document.getElementById('weightOfItem').value
     }
+    //A user cannont add the same ingredient twice therfore we check if the ingredient is already in the array
+    let found = tempArrayOfIngridientsForAMeal.find(ingrid => ingrid.ingridientId === tempIngridient.ingridientId);
+    if (found) {
+        alert('You have already added this ingredient to the meal. Please choose another one.');
+        return;
+    }
     tempArrayOfIngridientsForAMeal.push(tempIngridient);
     document.getElementById('weightOfItem').value = '';
     document.getElementById('itemsInput').value = '';
