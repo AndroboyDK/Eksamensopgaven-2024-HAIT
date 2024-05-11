@@ -163,8 +163,18 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Klikket på knappen for at tilføje ingridienser til et måltid og smidt dem i arrayet')
     });
 
+    document.getElementById("goBackToCreator").addEventListener('click', () => {
+        if (tempArrayOfIngridientsForAMeal.length === 0) {
+            alert('You must add at least one ingredient to the meal');
+            return;
+        } else {window.location.href = "../mealCreator/MealCreator.html";}
+    }); 
 
     document.getElementById('createMeal').addEventListener('click', async () => {
+        if (tempArrayOfIngridientsForAMeal.length === 0) {
+            alert('You must add at least one ingredient to the meal');
+            return;
+        }
         document.getElementById("holdseverythingafternav").style.display = "none";
         document.getElementById("loadinggif").style.display = "block";
         await runThruTempArrayAndPostIngridients();
